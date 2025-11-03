@@ -1,0 +1,123 @@
+/* --- Overlay background --- */
+.login-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: grid;
+  place-items: center;
+}
+
+/* --- Popup Container --- */
+.login-popup-container {
+  width: min(90%, 380px);
+  background-color: #fff;
+  color: #555;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 35px;
+  font-size: 15px;
+}
+
+/* --- Header Title --- */
+.login-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #222;
+}
+
+.login-popup-title h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.login-popup-title img {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* --- Input Section --- */
+.login-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-popup-inputs input {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.login-popup-inputs input:focus {
+  border-color: #ff6347;
+  box-shadow: 0 0 3px rgba(255, 99, 71, 0.3);
+}
+
+/* --- Button --- */
+.login-popup-container button {
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #ff6347;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.login-popup-container button:hover {
+  background-color: #e5533a;
+}
+
+/* --- Checkbox & Terms --- */
+.login-popup-condition {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.login-popup-condition input {
+  margin-top: 3px;
+}
+
+/* --- Switch Login/Signup Text --- */
+.login-popup p {
+  text-align: center;
+  color: #444;
+  font-size: 14px;
+}
+
+.login-popup span {
+  color: #ff6347;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.login-popup span:hover {
+  color: #e5533a;
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+  .login-popup-container {
+    width: 90%;
+    padding: 25px 20px;
+  }
+
+  .login-popup-title h2 {
+    font-size: 1.2rem;
+  }
+}
